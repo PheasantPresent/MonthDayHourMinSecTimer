@@ -18,7 +18,7 @@ class RunText(SampleBase):
         textColor = graphics.Color(255, 255, 0)
         pos = offscreen_canvas.width
         #my_text = self.args.text
-        my_text = countdown
+        my_text = iplcountdown2.countdown()
 
         while True:
             offscreen_canvas.Clear()
@@ -33,6 +33,8 @@ class RunText(SampleBase):
 
 # Main function
 if __name__ == "__main__":
-    run_text = RunText()
+    while True:
+        run_text = RunText()
+        time.sleep(1)
     if (not run_text.process()):
         run_text.print_help()
